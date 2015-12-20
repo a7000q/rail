@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('foo/bar', function()
+{
+    return 'Hello World';
+});
+
+Route::get('additem','ItemsController@add');
+Route::post('additem','ItemController@save');
+Route::post('get_parameters','ParametersController@get');
+Route::post('save_parameters','ParametersController@save');
